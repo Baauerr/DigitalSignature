@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\service\\impl\\digitalsignatureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:service\\impl\\digitalsignatureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\controllers\\digitalsignaturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:controllers\\digitalsignaturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\service\\idigitalsignature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:service\\idigitalsignature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\documentdata\\signeddocumentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:documentdata\\signeddocumentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\documentdata\\documentwithmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:documentdata\\documentwithmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\digitalsignature.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:digitalsignature.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\gaga\\digitalsignature\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4831C0F4-7456-46C6-A11F-DD6E472414C5}|DigitalSignature.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 209,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DigitalSignatureService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Service\\Impl\\DigitalSignatureService.cs",
+              "RelativeDocumentMoniker": "Service\\Impl\\DigitalSignatureService.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Service\\Impl\\DigitalSignatureService.cs",
+              "RelativeToolTip": "Service\\Impl\\DigitalSignatureService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T05:46:27.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DigitalSignatureController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Controllers\\DigitalSignatureController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DigitalSignatureController.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Controllers\\DigitalSignatureController.cs",
+              "RelativeToolTip": "Controllers\\DigitalSignatureController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T05:45:11.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SignedDocumentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\DocumentData\\SignedDocumentDTO.cs",
+              "RelativeDocumentMoniker": "DocumentData\\SignedDocumentDTO.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\DocumentData\\SignedDocumentDTO.cs",
+              "RelativeToolTip": "DocumentData\\SignedDocumentDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T06:53:54.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DocumentWithMetadata.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\DocumentData\\DocumentWithMetadata.cs",
+              "RelativeDocumentMoniker": "DocumentData\\DocumentWithMetadata.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\DocumentData\\DocumentWithMetadata.cs",
+              "RelativeToolTip": "DocumentData\\DocumentWithMetadata.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T06:41:32.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-29T06:30:41.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T05:45:03.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDigitalSignature.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Service\\IDigitalSignature.cs",
+              "RelativeDocumentMoniker": "Service\\IDigitalSignature.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\Service\\IDigitalSignature.cs",
+              "RelativeToolTip": "Service\\IDigitalSignature.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T05:46:06.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DigitalSignature.csproj",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\DigitalSignature.csproj",
+              "RelativeDocumentMoniker": "DigitalSignature.csproj",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\GAGA\\DigitalSignature\\DigitalSignature.csproj",
+              "RelativeToolTip": "DigitalSignature.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-29T08:47:06.937Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
