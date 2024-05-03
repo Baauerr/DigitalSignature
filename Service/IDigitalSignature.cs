@@ -4,9 +4,7 @@ namespace DigitalSignature.Service
 {
     public interface IDigitalSignature
     {
-        public string CreateSignature(string fileName);
-        public bool CheckSignature(string fileName);
-        
-
+        public string CreateSignature(IFormFile file);
+        public bool CheckSignature(IFormFile file, string publicKey);
     }
 }

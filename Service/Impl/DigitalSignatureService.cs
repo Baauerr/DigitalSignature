@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using System.Xml;
 using System.Xml.Serialization;
 using DigitalSignature.DocumentData;
 
@@ -8,61 +9,85 @@ namespace DigitalSignature.Service.Impl
 
     public class DigitalSignatureService : IDigitalSignature
     {
-
-        //Проверяет подпись
-        public bool CheckSignature(string fileName)
+        public bool CheckSignature(IFormFile file, string publicKeyXML)
         {
-            var publicKeyPath = $"C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\files\\{fileName}-publicKey.txt";
-            var documentPath = $"C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\files\\{fileName}";
 
-            RSAParameters publicKey = GetPublicKeyFromFile(publicKeyPath);
+            var fileBytes = ConvertIFormFileToByteArray(file);
 
-            DocumentWithMetadata allDocument = GetHashFromFileMetadata(documentPath);
+            RSAParameters publicKeyRSA = ConvertXmlPublicKeyToRsaParameters(publicKeyXML);
+
+            DocumentWithMetadata allDocument = GetHashFromFileMetadata(fileBytes);
 
             byte[] documentHash = HashDocument(allDocument.EncryptedData);
 
-            using (RSA rsa = RSA.Create(publicKey))
+            using (RSA rsa = RSA.Create(publicKeyRSA))
             {
                 return rsa.VerifyData(documentHash, allDocument.Signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
             }
         }
 
-        //Достаёт публичный ключ из файла 
-
-        private RSAParameters GetPublicKeyFromFile(string publicKeyPath)
+        public static RSAParameters ConvertXmlPublicKeyToRsaParameters(string xmlPublicKey)
         {
-            RSAParameters publicKey;
-            XmlSerializer serializer = new XmlSerializer(typeof(RSAParameters));
-            using (FileStream fs = new FileStream(publicKeyPath, FileMode.Open))
+            RSAParameters rsaParams = new RSAParameters();
+
+            try
             {
-                publicKey = (RSAParameters)serializer.Deserialize(fs);
+                var xmlDoc = new XmlDocument();
+                xmlDoc.LoadXml(xmlPublicKey);
+
+
+                byte[] modulusBytes = Convert.FromBase64String(xmlDoc.SelectSingleNode("//Modulus").InnerText);
+                byte[] exponentBytes = Convert.FromBase64String(xmlDoc.SelectSingleNode("//Exponent").InnerText);
+
+                rsaParams.Modulus = modulusBytes;
+                rsaParams.Exponent = exponentBytes;
+
+                return rsaParams;
             }
-            return publicKey;
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error converting XML public key to RSAParameters: " + ex.Message);
+                throw;
+            }
         }
 
-        //Главная функция, которая отвечает за цифровую подпись
-
-        public string CreateSignature(string fileName)
+        public byte[] ConvertIFormFileToByteArray(IFormFile file)
         {
-            var documentPath = $"C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\files\\{fileName}";
-            var documentBytes = GetFile(documentPath);
+            using (MemoryStream ms = new MemoryStream())
+            {
+                file.CopyTo(ms);
+                return ms.ToArray();
+            }
+        }
+
+        public string CreateSignature(IFormFile file)
+        {
+
+            var pathToSaveFile = Environment.CurrentDirectory + $"\\files\\{file.FileName}";
+
+
+            var documentBytes = ConvertIFormFileToByteArray(file);
             var hashDocument = HashDocument(documentBytes);
-            var encryptedHash = AssymetricEncryptHash(hashDocument, fileName);
-            AddHashToFile(documentPath, encryptedHash.HashedData);
+            var encryptedHash = AssymetricEncryptHash(hashDocument);
+            AddHashToFile(pathToSaveFile, encryptedHash.FileWithSignature);
+
             return encryptedHash.publicKey;
         }
 
-        //Разделяем документ с подписью на исходные данные + подпись 
-
-        private DocumentWithMetadata GetHashFromFileMetadata(string filePath)
+        private DocumentWithMetadata GetHashFromFileMetadata(byte[] file) 
         {
-            byte[] fileContent = File.ReadAllBytes(filePath);
 
-            int dataSize = fileContent.Length - 256; 
+            if (file.Length < 256)
+            {
+                throw new ArgumentException("File haven't signature, bro");
+            }
+
+
+            int dataSize = file.Length - 256; 
             byte[] data = new byte[dataSize];
             byte[] signature = new byte[256];
-            Array.Copy(fileContent, 0, data, 0, dataSize);
-            Array.Copy(fileContent, dataSize, signature, 0, 256);
+            Array.Copy(file, 0, data, 0, dataSize);
+            Array.Copy(file, dataSize, signature, 0, 256);
 
             var newDoc = new DocumentWithMetadata
             {
@@ -73,9 +98,7 @@ namespace DigitalSignature.Service.Impl
             return newDoc;
 
         }
-        
-        //Добавляем подпись в конец битовой записи файла (типа зашиваем в метаданные)
-        
+
         private void AddHashToFile(string filePath, byte[] hash)
         {
             using (FileStream targetFileStream = new FileStream(filePath, FileMode.Append))
@@ -83,16 +106,6 @@ namespace DigitalSignature.Service.Impl
                 targetFileStream.Write(hash, 0, hash.Length);
             }
         }
-
-        //Получение файла 
-
-        private byte[] GetFile(string filePath)
-        {
-            byte[] documentBytes = File.ReadAllBytes(filePath);
-            return documentBytes;
-        }
-
-        //Хеширование документа при помощи SHA256
 
         private byte[] HashDocument(byte[] documentBytes)
         {
@@ -104,10 +117,7 @@ namespace DigitalSignature.Service.Impl
             return hash;
         }
 
-
-        //Ассиметричное шифрование захешированного документа
-
-        private SignWithKey AssymetricEncryptHash(byte[] documentHash, string fileName)
+        private SignedDocumentWithKey AssymetricEncryptHash(byte[] documentHash)
         {
             RSA rsa = RSA.Create();
 
@@ -115,27 +125,19 @@ namespace DigitalSignature.Service.Impl
 
             RSAParameters publicKey = rsa.ExportParameters(false);
 
-            string publicKeyPath = $"C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\files\\{fileName}-publicKey.txt";
-
             XmlSerializer serializer = new XmlSerializer(typeof(RSAParameters));
-            using (TextWriter writer = new StreamWriter(publicKeyPath))
-            {
-                serializer.Serialize(writer, publicKey);
-            }
 
             var xmlKey = RSAParametersToXml(publicKey);
 
-            var signWithKey = new SignWithKey
+            var signWithKey = new SignedDocumentWithKey
             {
-                HashedData = encryptedBytes,
+                FileWithSignature = encryptedBytes,
                 publicKey = xmlKey
             };
 
             return signWithKey;
 
         }
-
-        //Преобразование публичного ключа в XML, чтобы удобно было его хранить 
 
         static string RSAParametersToXml(RSAParameters parameters)
         {
@@ -146,8 +148,6 @@ namespace DigitalSignature.Service.Impl
                 return writer.ToString();
             }
         }
-
-        //Шифровка ключа при помощи RSA приватным ключом + возврат подписи 
 
         private byte[] Encrypt(RSAParameters privateKey, byte[] documentHash)
         {

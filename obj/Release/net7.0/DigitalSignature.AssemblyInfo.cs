@@ -13,7 +13,7 @@ using System.Reflection;
 
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8ee67c21-0bdf-4766-9320-06c2a6b860a0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalSignature")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf549e816fdb8629c9e57cb7e7e937f33c47374b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalSignature")]

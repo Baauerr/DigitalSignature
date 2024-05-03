@@ -1,12 +1,8 @@
 ﻿namespace DigitalSignature.DocumentData
 {
-    public class SignWithKey
+    public class SignedDocumentWithKey
     {
-        public byte[] HashedData { get; set; }
+        public byte[] FileWithSignature { get; set; }
         public string publicKey { get; set; }
-    }
-    public class VerifyDocumentDTO
-    {
-        public string documentName { get; set; }
     }
 }

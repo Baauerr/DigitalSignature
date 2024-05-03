@@ -1966,11 +1966,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\DigitalSignature.csproj",
+      "projectUniqueName": "C:\\Users\\Артем\\Desktop\\Project\\DigitalSignature\\DigitalSignature.csproj",
       "projectName": "DigitalSignature",
-      "projectPath": "C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\DigitalSignature.csproj",
+      "projectPath": "C:\\Users\\Артем\\Desktop\\Project\\DigitalSignature\\DigitalSignature.csproj",
       "packagesPath": "C:\\Users\\Артем\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\obj\\",
+      "outputPath": "C:\\Users\\Артем\\Desktop\\Project\\DigitalSignature\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Артем\\AppData\\Roaming\\NuGet\\NuGet.Config",

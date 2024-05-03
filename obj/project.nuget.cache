@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dmafkcQ12YDWfkyQurGzCeTLM5yM2qbXvPDUTKN5zgFm40SMqZcCGIFlgQw4qmQ9kwNwLjG1EJZvECA2eg1iVQ==",
+  "dgSpecHash": "kq95g74YeG3L6wXlJSlfvwphHhedLy8umoVfV9c1gQ8eJdMw+bQ4sW6vW2m7fRZUrcR42iIp4gOpCmiXrdDKyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Артем\\Desktop\\GAGA\\DigitalSignature\\DigitalSignature.csproj",
+  "projectFilePath": "C:\\Users\\Артем\\Desktop\\Project\\DigitalSignature\\DigitalSignature.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Артем\\.nuget\\packages\\aspose.pdf\\24.4.0\\aspose.pdf.24.4.0.nupkg.sha512",
     "C:\\Users\\Артем\\.nuget\\packages\\metadataextractor\\2.8.1\\metadataextractor.2.8.1.nupkg.sha512",

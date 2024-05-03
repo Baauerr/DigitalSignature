@@ -1,3 +1,4 @@
+using Aspose.Pdf.Plugins;
 using DigitalSignature.DocumentData;
 using DigitalSignature.Service;
 using DigitalSignature.Service.Impl;
@@ -19,13 +20,15 @@ namespace DigitalSignature.Controllers
         public IActionResult SignDocument(IFormFile file)
         {
 
-            return Ok(_digitalSignature.CreateSignature(file));
+            var publicKey = _digitalSignature.CreateSignature(file);
+
+            return Ok(publicKey);
         }
 
         [HttpPost("check")]
-        public IActionResult CheckSignature([FromBody] VerifyDocumentDTO verifyData)
+        public IActionResult CheckSignature(string publicKey, IFormFile file)
         {
-            var signatureIsValid = _digitalSignature.CheckSignature(verifyData.documentName);
+            var signatureIsValid = _digitalSignature.CheckSignature(file, publicKey);
             return Ok(signatureIsValid);
         }
     }
